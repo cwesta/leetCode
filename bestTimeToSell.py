@@ -29,26 +29,26 @@ Constraints:
 """
 
 
-    """
-        Input: prices = [7,1,5,3,6,4]
-        
-        find lowest price first, then find highest price
-        if price trends down return 0 since there is no max profit available
-        
-        
-        [7,3,5,1,6,4]
-         ^
-           ^
-           check if the ith element is less than the i + j 
-                if so store it in a variable for cross checking
-                
-           
-           base case:
-            if ith element < j then
-        
+"""
+    Input: prices = [7,1,5,3,6,4]
+    
+    find lowest price first, then find highest price
+    if price trends down return 0 since there is no max profit available
     
     
-    """
+    [7,3,5,1,6,4]
+      ^
+        ^
+        check if the ith element is less than the i + j 
+            if so store it in a variable for cross checking
+            
+        
+        base case:
+        if ith element < j then
+    
+
+
+"""
 
     
     
