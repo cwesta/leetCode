@@ -39,27 +39,34 @@ Constraints:
     [7,3,5,1,6,4]
       ^
         ^
-        check if the ith element is less than the i + j 
-            if so store it in a variable for cross checking
-            
-        
-        base case:
-        if ith element < j then
+      L R
+      if the 
     
 
 
 """
 
     
+def buyLowSellHigh(arr):
+  
+  l, r = 0, 1
+  maxP = 0
+  # Remeber this is to calculate the MAX Profit between two dates
+  # L = buy low and R = Sell High
+  # how do you calculate that? there is a function you can use native to python to find it
+  while l < r:
+    if arr[l] < arr[r]:
+      pass
+    else:
+      pass
     
-arr = [7,3,5,100,6,4,14,10000,2]
+      
+  return maxP
 
-localMin = 0
 
-for i in range(len(arr) - 1):
-  for j in range(i+1, len(arr)):
-    if arr[i] < arr[j]:
-      if (localMin == 0 or localMin > arr[i]):
-        localMin = arr[i]
 
-print(localMin)
+
+prices = [7,1,5,3,6,4]
+
+buyLowSellHigh(prices)
+
