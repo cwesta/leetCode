@@ -32,15 +32,29 @@ Constraints:
 
 
  #Brute force method - exceeds time complexity O(n^2)
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] == nums[j]:
-                    return True
-        return False
+# class Solution:
+#     def containsDuplicate(self, nums: List[int]) -> bool:
+#         for i in range(len(nums)):
+#             for j in range(i+1, len(nums)):
+#                 if nums[i] == nums[j]:
+#                     return True
+#         return False
     
 
 #need to lower time complexity, could use a pointers 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        l, r = 0, 1
+        nums.sort()
+        for i in range(len(nums)-1):
+            if nums[l] == nums[r]:
+                return True
+            l += 1
+            r += 1 
+        return False
+#This passes ! tho it could be faster using a hashset    
 
 #need to look into hashsets seems to be the best bet to solve time complexity issue
+
+
+        
