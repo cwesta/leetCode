@@ -54,11 +54,15 @@ def buyLowSellHigh(arr):
   # Remeber this is to calculate the MAX Profit between two dates
   # L = buy low and R = Sell High
   # how do you calculate that? there is a function you can use native to python to find it
-  while l < r:
+  while r < len(arr):
     if arr[l] < arr[r]:
-      pass
+      profit = arr[r] - arr[l]
+      maxP = max(profit, maxP)
     else:
-      pass
+      l = r
+      
+    r += 1
+      
     
       
   return maxP
@@ -68,5 +72,6 @@ def buyLowSellHigh(arr):
 
 prices = [7,1,5,3,6,4]
 
-buyLowSellHigh(prices)
+res = buyLowSellHigh(prices)
 
+print(res)
